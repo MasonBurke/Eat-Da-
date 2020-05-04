@@ -5,9 +5,9 @@ $(function() {
     var newDevour = $(this).data("newdevour");
 
     var newDevourState = {
-     hungry: newDevour
+     devoured: newDevour
     };
-
+console.log(newDevourState)
     // Send the PUT request.
     $.ajax("/api/burgers/" + id, {
       type: "PUT",
@@ -27,7 +27,7 @@ $(function() {
 
     var newBurger = {
       name: $("#ca").val().trim(),
-      hungry: $("[name=hungry]:checked").val().trim()
+      devoured: $("[name=devoured]:checked").val().trim()
     };
 
     // Send the POST request.
